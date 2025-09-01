@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHAWHEELS - Вкусная шаурма на колесах</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header class="header">
+            <div class="container header-content">
+                <a class="logo" href="#">SHA<span>WHEELS</span></a>
+
+                <nav class="nav">
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="menu-toggle-label">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+
+                    <ul class="nav-links">
+                        <li><a href="#hero">Главная</a></li>
+                        <li><a href="#promo">Акции</a></li>
+                        <li><a href="#menu">Меню</a></li>
+                        <li><a href="#benefits">Преимущества</a></li>
+                        <li><a href="#testimonials">Отзывы</a></li>
+                        <li><a href="#locations">Расположение</a></li>
+                    </ul>
+                </nav>
+
+                <div class="contact-info">
+                    <a href="tel:+3725656707" class="phone-link">+372 5656 0707</a>
+                    <a href="#order" class="btn btn-order">Заказать</a>
+                </div>
+            </div>
+        </header>
+
+
+        <section id="hero" class="hero">
+            <div class="container hero-content">
+                <h1>Сочная шаверма за 30 минут!</h1>
+                <h2>Готовим на месте из свежих продуктов. Доставка без ожидания!</h2>
+                <a href="#order" class="btn btn-cta">Заказать сейчас</a>
+            </div>
+        </section>
+
+
+        <div class="foodtruck-showcase">
+            <div class="container">
+                <img src="images/foodtrack_nature.png" alt="Наши фудтраки" class="foodtruck-img">
+            </div>
+        </div>
+
+
+        <section id="promo" class="section promo">
+            <div class="container">
+                <h2 class="section-title">Наши акции</h2>
+                <div class="promos-container">
+                    <div class="promo-card glass-effect">
+                        <h3 class="promo-title">Скидка 20% на первый заказ</h3>
+                        <p class="promo-description">Введите промокод <strong>FIRST20</strong> при оформлении заказа</p>
+                        <a href="#order" class="btn">Заказать</a>
+                    </div>
+                    <div class="promo-card glass-effect">
+                        <h3 class="promo-title">Каждая 5-я шаурма бесплатно</h3>
+                        <p class="promo-description">Постоянным клиентам каждый 5-й набор бесплатно</p>
+                        <a href="#loyalty" class="btn">Стать постоянным клиентом</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="history" class="section history">
+            <div class="container">
+                <h2 class="section-title">История SHAWHEELS</h2>
+                <div class="history-container glass-effect">
+                    <div class="history-image">
+                        <img src="images/logo.png" alt="История SHAWHEELS" class="history-img">
+                    </div>
+                    <div class="history-content">
+                        <h3>Как всё начиналось</h3>
+                        <p>История SHAWHEELS началась в 2020 году, когда талантливый повар Андрей и предприниматель Михаил решили объединить свои усилия для создания уникального фудтрака с шаурмой.</p>
+                        <p>Вдохновлённые уличной едой со всего мира и страстью к качественным ингредиентам, они создали уникальные рецепты, которые быстро полюбились жителям Эстонии.</p>
+                        <p>Первый фудтрак SHAWHEELS начал работу на улицах Таллинна, и благодаря высокому качеству и отличному вкусу, бренд быстро завоевал популярность. Сегодня наши фудтраки можно встретить в разных городах Эстонии, а количество постоянных
+                            клиентов растёт с каждым днём.</p>
+                        <p>Наша миссия остаётся неизменной — предлагать самую вкусную шаурму, приготовленную из свежих местных продуктов, делая жизнь наших клиентов вкуснее и ярче!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="facts" class="section facts">
+            <div class="container">
+                <h2 class="section-title">Интересные факты о шаурме</h2>
+                <div class="facts-container">
+                    <div class="fact-card glass-effect">
+                        <div class="fact-number">01</div>
+                        <h3>Древняя история</h3>
+                        <p>Шаурма имеет многовековую историю — похожие блюда готовили ещё в Османской империи в 18-19 веках. В каждой стране Ближнего Востока есть своя версия этого блюда с уникальными особенностями.</p>
+                    </div>
+                    <div class="fact-card glass-effect">
+                        <div class="fact-number">02</div>
+                        <h3>Разные названия</h3>
+                        <p>В разных странах шаурму называют по-разному: шаварма (Израиль), донер-кебаб (Турция), гирос (Греция), тако аль пастор (Мексика). В каждой стране есть свои особенности приготовления и подачи.</p>
+                    </div>
+                    <div class="fact-card glass-effect">
+                        <div class="fact-number">03</div>
+                        <h3>Сбалансированное блюдо</h3>
+                        <p>Правильно приготовленная шаурма — это сбалансированное блюдо, содержащее белки (мясо), углеводы (лаваш), полезные жиры и клетчатку (овощи). Наша шаурма следует принципам правильного питания!</p>
+                    </div>
+                    <div class="fact-card glass-effect">
+                        <div class="fact-number">04</div>
+                        <h3>Рецепт соуса</h3>
+                        <p>Наш фирменный соус для шаурмы готовится по специальному рецепту с использованием йогурта, свежей зелени и секретной смеси специй, привезенных с Ближнего Востока. Это придаёт нашей шаурме неповторимый вкус!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-highlight">
+            <div class="container">
+                <div class="benefits-banner glass-effect">
+                    <h3>Наша шаверма:</h3>
+                    <ul class="benefits-list-highlight">
+                        <li>состоит из продуктов местного происхождения</li>
+                        <li>всегда свежая</li>
+                        <li>исключительно полезна соблюдающим правило тарелки*</li>
+                    </ul>
+                    <p class="benefits-note">*Правило тарелки — четкое деление тарелки на три сектора, в каждом из которых должны располагаться определенные продукты. Это помогает соблюдать баланс жиров, белков и углеводов в рационе.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="menu" class="section menu">
+            <div class="container">
+                <h2 class="section-title">Меню</h2>
+                <div class="menu-container">
+                    <div class="menu-card glass-effect">
+                        <div class="menu-img-container">
+                            <img src="images/shawermB.png" alt="Классическая шаурма" class="menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3 class="menu-item-title">Классическая шаурма</h3>
+                            <p class="menu-price">4,5 €</p>
+                            <p class="menu-desc">Сочное говяжье филе, свежие овощи, фирменный соус в лаваше.</p>
+                            <a href="#order" class="btn btn-menu">Заказать</a>
+                        </div>
+                    </div>
+
+                    <div class="menu-card glass-effect">
+                        <div class="menu-img-container">
+                            <img src="images/shawermC.png" alt="Куриная шаурма" class="menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3 class="menu-item-title">Куриная шаурма</h3>
+                            <p class="menu-price">5 €</p>
+                            <p class="menu-desc">Нежное куриное филе, свежие овощи и специальный соус.</p>
+                            <a href="#order" class="btn btn-menu">Заказать</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="drinks-section">
+                    <h3 class="subsection-title">Напитки</h3>
+                    <div class="drinks-container">
+                        <div class="drink-card glass-effect">
+                            <h4>Горячие напитки</h4>
+                            <p class="drink-price">2 €</p>
+                        </div>
+                        <div class="drink-card glass-effect">
+                            <h4>Холодные напитки</h4>
+                            <p class="drink-price">3 €</p>
+                        </div>
+                    </div>
+                    <a href="#order" class="btn btn-center">Заказать напитки</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="benefits" class="section benefits">
+            <div class="container">
+                <h2 class="section-title">Наши преимущества</h2>
+                <div class="benefits-container">
+                    <div class="benefit-card glass-effect">
+                        <h3>Свежие ингредиенты</h3>
+                        <p>Мы закупаем продукты каждый день, чтобы гарантировать свежесть и качество нашей шаурмы.</p>
+                    </div>
+                    <div class="benefit-card glass-effect">
+                        <h3>Быстрое приготовление</h3>
+                        <p>Ваш заказ будет готов за 5-7 минут, пока вы ждете или можете заказать доставку.</p>
+                    </div>
+                    <div class="benefit-card glass-effect">
+                        <h3>Мобильность</h3>
+                        <p>Мы приедем в любой район города — следите за нашим расписанием в социальных сетях.</p>
+                    </div>
+                    <div class="benefit-card glass-effect">
+                        <h3>Доступные цены</h3>
+                        <p>Качественная еда не должна быть дорогой — наши цены вас приятно удивят!</p>
+                    </div>
+                </div>
+                <div class="cta-center">
+                    <a href="#order" class="btn">Заказать сейчас</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="order" class="section order">
+            <div class="container">
+                <h2 class="section-title">Сделать заказ</h2>
+                <div class="form-container glass-effect">
+                    <form id="order-form" class="order-form">
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Адрес доставки</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="order-details">Ваш заказ</label>
+                            <textarea id="order-details" name="order-details" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-full">Оформить заказ</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="foodtruck-showcase bottom-showcase">
+            <div class="container">
+                <img src="images/foodtrack.png" alt="Наши фудтраки" class="foodtruck-img">
+            </div>
+        </div>
+
+
+        <section id="testimonials" class="section testimonials">
+            <div class="container">
+                <h2 class="section-title">Отзывы клиентов</h2>
+                <div class="testimonials-container">
+                    <div class="testimonial-card glass-effect">
+                        <p class="testimonial-text">"Лучшая шаурма в городе! Всегда свежие ингредиенты и очень вкусно. Рекомендую всем друзьям!"</p>
+                        <p class="testimonial-author">- Анна К.</p>
+                    </div>
+                    <div class="testimonial-card glass-effect">
+                        <p class="testimonial-text">"Очень удобно, что фудтрак приезжает в разные районы. Всегда могу поймать их рядом с работой или домом."</p>
+                        <p class="testimonial-author">- Михаил Д.</p>
+                    </div>
+                    <div class="testimonial-card glass-effect">
+                        <p class="testimonial-text">"Шаурма — это находка для меня! Наконец-то вкусная альтернатива пп-блюдам."</p>
+                        <p class="testimonial-author">- Елена В.</p>
+                    </div>
+                </div>
+
+
+                <div class="form-container glass-effect review-form-container">
+                    <h3>Оставить отзыв</h3>
+                    <form id="review-form" class="review-form">
+                        <div class="form-group">
+                            <label for="review-name">Ваше имя</label>
+                            <input type="text" id="review-name" name="review-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">Ваша оценка</label>
+                            <select id="rating" name="rating" required>
+                                <option value="">Выберите оценку</option>
+                                <option value="5">5 - Отлично</option>
+                                <option value="4">4 - Хорошо</option>
+                                <option value="3">3 - Удовлетворительно</option>
+                                <option value="2">2 - Плохо</option>
+                                <option value="1">1 - Очень плохо</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="review-text">Ваш отзыв</label>
+                            <textarea id="review-text" name="review-text" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-full">Отправить отзыв</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="loyalty" class="section loyalty">
+            <div class="container">
+                <h2 class="section-title">Стать постоянным клиентом</h2>
+                <div class="form-container glass-effect">
+                    <form id="loyalty-form" class="loyalty-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="loyalty-name">Имя</label>
+                                <input type="text" id="loyalty-name" name="loyalty-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="loyalty-surname">Фамилия</label>
+                                <input type="text" id="loyalty-surname" name="loyalty-surname" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="loyalty-id">Личный код</label>
+                                <input type="text" id="loyalty-id" name="loyalty-id" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="loyalty-phone">Номер телефона</label>
+                                <input type="tel" id="loyalty-phone" name="loyalty-phone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="loyalty-address">Адрес доставки</label>
+                            <input type="text" id="loyalty-address" name="loyalty-address" required>
+                        </div>
+                        <button type="submit" class="btn btn-full">Стать участником</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section faq">
+            <div class="container">
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                <div class="faq-container glass-effect">
+                    <details class="faq-item">
+                        <summary class="faq-question">Как узнать, где сейчас находится фудтрак?</summary>
+                        <div class="faq-answer">
+                            <p>Мы публикуем ежедневное расписание и локации в наших социальных сетях, а также отправляем push-уведомления через наше мобильное приложение.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Сколько времени займет доставка?</summary>
+                        <div class="faq-answer">
+                            <p>Доставка занимает от 30 до 60 минут в зависимости от вашего местоположения и загруженности курьеров.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Можно ли заказать фудтрак на частное мероприятие?</summary>
+                        <div class="faq-answer">
+                            <p>Да, мы предоставляем услуги кейтеринга для частных мероприятий, корпоративов и фестивалей. Свяжитесь с нами для обсуждения деталей.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Какие способы оплаты вы принимаете?</summary>
+                        <div class="faq-answer">
+                            <p>Мы принимаем наличные, банковские карты, а также оплату через Apple Pay и Google Pay.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="locations" class="section locations">
+            <div class="container">
+                <h2 class="section-title">Наши локации</h2>
+                <div class="locations-container">
+                    <div class="location-card glass-effect">
+                        <h3>Таллинн, Тарту мнт 14</h3>
+                        <p>ПН-ЧТ: 7:30-19:30</p>
+                        <p>ПТ: 7:30-24:00</p>
+                        <p>СБ-ВС: 11:30-24:00</p>
+                        <p>Телефон: <a href="tel:+3725656505">+372 5656 5056</a></p>
+                    </div>
+                    <div class="location-card glass-effect">
+                        <h3>Тарту, ул Калда 14</h3>
+                        <p>ПН-ЧТ: 7:30-19:30</p>
+                        <p>ПТ: 7:30-24:00</p>
+                        <p>СБ-ВС: 11:30-24:00</p>
+                        <p>Телефон: <a href="tel:+3725656606">+372 5656 6065</a></p>
+                    </div>
+                    <div class="location-card glass-effect">
+                        <h3>Нарва, ул Пушкина 14</h3>
+                        <p>ПН-ЧТ: 7:30-19:30</p>
+                        <p>ПТ: 7:30-24:00</p>
+                        <p>СБ-ВС: 11:30-24:00</p>
+                        <p>Телефон: <a href="tel:+3725656060">+372 5656 0605</a></p>
+                    </div>
+                    <div class="location-card glass-effect">
+                        <h3>Йыхви, Тарту мнт 14</h3>
+                        <p>ПН-ЧТ: 7:30-19:30</p>
+                        <p>ПТ: 7:30-24:00</p>
+                        <p>СБ-ВС: 11:30-24:00</p>
+                        <p>Телефон: <a href="tel:+3725656050">+372 5656 0506</a></p>
+                    </div>
+                </div>
+
+                <div class="map-container glass-effect">
+                    <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2076.8756982008434!2d24.739270415845428!3d59.43769798170183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692949d613410ff%3A0x1b8cd9ae39fe93a5!2sTartu%20maantee%2014%2C%2010117%20Tallinn%2C%20Estonia!5e0!3m2!1sen!2sus!4v1631534380473!5m2!1sen!2sus"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <h3 class="footer-title">SHAWHEELS</h3>
+                        <p>Мобильный фудтрак с самой вкусной шаурмой в городе</p>
+                    </div>
+                    <div class="footer-col">
+                        <h3 class="footer-title">Навигация</h3>
+                        <ul class="footer-links">
+                            <li><a href="#hero">Главная</a></li>
+                            <li><a href="#promo">Акции</a></li>
+                            <li><a href="#menu">Меню</a></li>
+                            <li><a href="#benefits">Преимущества</a></li>
+                            <li><a href="#testimonials">Отзывы</a></li>
+                            <li><a href="#locations">Расположение</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3 class="footer-title">Контакты</h3>
+                        <ul class="footer-links">
+                            <li>Телефон: <a href="tel:+3725656707">+372 5656 0707</a></li>
+                            <li>Email: <a href="mailto:info@shawheels.ee">info@shawheels.ee</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    © 2025 SHAWHEELS. Все права защищены.
+                </div>
+            </div>
+        </footer>
+
+        <div class="quick-order-button">
+            <a href="#order" class="btn quick-order-btn">Заказать</a>
+        </div>
+    </div>
+</body>
+
+</html>
