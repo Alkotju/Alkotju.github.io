@@ -1,0 +1,39 @@
+p {
+	color: #38557fff;
+}
+.redtext { color:##d34439ff; }
+body {
+	background-color: #efebdfff;
+}
+h1 {font-family: Arial;
+	font-size: 32px;
+	font-weight: ;
+	font-style: italic;
+
+
+}
+
+table {
+ 	width: 1180px;
+ 	height: 100%;
+ 	table-layout: auto;
+ 	text-align:center;
+ 	vertical-align: top;
+ 	padding-left: auto;
+ 	padding-top:auto;
+ 	paddng-right:auto;
+ 	padding-bottom:auto;
+ 	border-collapse: separate;
+ 	caption-side: top;
+ 	empty-cells: hide;
+ }
+
+th, td {
+	border:1px;
+	border-style:groove ;
+	border-color: #38557fff; 
+	background-color:#dfb600ff ;
+}
+
+
+
