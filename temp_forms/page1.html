@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация: Плавание</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h1>Регистрация на соревнования по плаванию</h1>
+        
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="page0.html">Опросник ресторана</a></li>
+            <li><a href="page1.html">Плавание</a></li>        
+        </ul>
+    </nav>     
+    
+
+    <main>
+        <form action="submit_swimming.php" method="post">
+
+        <fieldset>
+            <legend>Общие данные</legend>
+        <div class="name">
+            <label for="name">Фамилия и имя:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="name">
+            <label for="dob">Дата рождения:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>    
+        <div class="name">
+            <label for="gender">Пол:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Мужской</option>
+                <option value="female">Женский</option>
+            </select>
+        </div>    
+        <div class="name">
+            <label for="age_category">Возрастная категория:</label>
+            <input type="text" id="age_category" name="age_category" required>
+        </div>    
+        <div class="name">    
+            <label for="club">Клуб/Организация:</label>
+            <input type="text" id="club" name="club" required>
+        </div>
+        <div class="name">
+            <label for="coach">Тренер:</label>
+            <input type="text" id="coach" name="coach" >
+        </div>
+        <div class="name">
+            <label for="experience">Спортивный опыт:</label>
+            <textarea id="experience" name="experience" rows="10" cols="45"></textarea>
+        </div>
+        <div class="name">
+            <label for="achievements">Достижения:</label>
+            <textarea id="achievements" name="achievements" rows="10" cols="45"></textarea>
+
+        </fieldset>
+        
+
+
+            <fieldset>
+                <legend>Выбор соревнования</legend>
+
+                <label for="event_date">Дата соревнования:</label>
+                <input type="date" id="event_date" name="event_date" required>
+
+                <label for="competition">Дисциплина:</label>
+                <select id="competition" name="choise" required>
+
+                    <option value="">Выберите вариант</option>
+                    <option value="freestyle">Вольный стиль</option>
+                    <option value="breaststroke">Брасс</option>
+                    <option value="butterfly">Баттерфляй</option>
+                    <option value="backstroke">Спина</option>
+                    <option value="im">Индивидуальное комплексное плавание</option>
+                    <option value="relay">Эстафеты</option>
+                </select>
+
+                <label for="distances">Дистанции: </label>
+                <select id="distances" name="choise"  required>
+                    <option value="50m">50м</option>
+                    <option value="100m">100м</option>
+                    <option value="200m">200м</option>
+                    <option value="4x100">4x100м</option>
+                </select>
+
+                <label for="category">Разряд:</label>
+                <input type="text" id="category" name="category">
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Контакты и согласие</legend>
+
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="register_date">Дата регистрации:</label>
+                <input type="date" id="register_date" name="register_date" required>
+
+                <input type="checkbox" name="terms"  value="yes" required>
+                <label for="consent">Я согласен на обработку персональных данных</label>
+            </fieldset>
+
+            <div class="form-buttons">
+                <button type="submit">Отправить</button>
+                <button type="reset">Очистить</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p></p>
+    </footer>
+</div>    
+</body>
+</html>

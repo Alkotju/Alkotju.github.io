@@ -1,0 +1,106 @@
+body{
+	background-color: #F7FBDE;
+
+}
+
+.wrapper{
+	width: 1280px;
+	background-color: #FDF3DF;
+
+}
+
+form {
+	width: 600px;
+	margin: 0  auto;
+	border: 3px dashed #a7cecd #f8453e;
+	background: gray;
+	box-sizing: border-box;
+	padding: 25px;
+	width: 50%; 
+	margin: 0 auto;
+	border: 10px solid transparent;
+	border-image: 10 repeating-linear-gradient(45deg, #A7CECC, #A7CECC 10px, 
+transparent 10px, transparent 20px, #F8463F 20px, #F8463F 
+30px,transparent 30px, transparent 40px);
+}
+
+h1{
+	width: 400px;
+	margin: 0  auto;
+	font-family: "Pacifico", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 24px;
+	color: #f8453e;
+	text-transform: uppercase;
+	background-color:#a7cecd; 
+	text-shadow: 4px 4px white; 
+
+}
+
+
+
+
+
+p {
+width: 300px;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+#full-name{
+	background-color: #a7cecd;
+	color: #1a2e37;
+	border: 2px solid #f8453e;
+	border-radius: 20px;
+}
+
+#country{
+	background-color: #a7cecd;	
+	color: #1a2e37;
+	border: 2px solid #f8453e;
+	border-radius: 20px;	
+}
+
+#email{
+	background-color: #f8453e;
+	color: #1a2e37;
+	border: 2px solid #a7cecd;
+	border-radius: 20px;	
+}
+
+#age{
+	background-color: #f8453e;
+	color:  #1a2e37;
+
+}
+
+#sourse{
+	background-color: #a7cecd;
+	color: #1a2e37;
+	border: 2px solid #f8453e;
+	border-radius: 20px;
+}
+
+#additional-info{
+	background-color: #a7cecd;
+	color: #1a2e37;
+	border: 2px solid #f8453e;
+	border-radius: 20px;
+}
+
+button{
+	font-family: tahoma, serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 16px;
+	width: 150px;
+	height: 75px;
+	margin-left: 50px;
+	padding: 20px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background-color: #a4cbcb;
+	color: #f8453e;
+	border-style: solid 3px;
+}

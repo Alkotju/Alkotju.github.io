@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета посетителя ресторана "Valge Kotkas"</title>
+    <link rel="stylesheet" type="text/css" href="styles0.css">
+
+</head>
+<body>
+<div class="wrapper">
+        <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="page0.html">Опросник ресторана</a></li>
+            <li><a href="page1.html">Плавание</a></li>
+        </ul>
+    </nav>  
+    <header>
+
+        
+    </header>
+ 
+    <fieldset>
+    <form class="survey-form">
+        <h1>Анкета посетителя ресторана "Valge Kotkas"</h1>
+
+        <div class="form-group">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="surname">Фамилия</label>
+            <input type="text" id="surname" name="surname" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Электронная почта</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Пол</label>
+            <select id="gender" name="gender">
+                <option value="male">Мужской</option>
+                <option value="female">Женский</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="age">Возраст</label>
+            <input type="text" id="age" name="age">
+        </div>
+        <div class="form-group">
+            <label for="color">Любимый цвет</label>
+            <input type="text" id="color" name="color">
+        </div>
+        <div class="form-group">
+            <label for="cuisine">Предпочтения в кухне</label>
+            <select id="cuisine" name="cuisine">
+                <option value="">Выберите вариант</option>
+                <option value="european">Европейская</option>
+                <option value="asian">Азиатская</option>
+                <option value="local">Местная</option>
+                <option value="other">Другое</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="menu-suggestions">Какие блюда Вы бы хотели видеть в меню?</label>
+            <textarea id="menu-suggestions" name="menu-suggestions"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="visit-date">Дата посещения</label>
+            <input type="date" id="visit-date" name="visit-date" required>
+        </div>
+        <div class="form-group">
+            <label for="reason">Почему Вы выбрали наше заведение?</label>
+            <select id="reason" name="reason">
+                <option value="">Выберите вариант</option>
+                <option value="location">Недалеко от дома/работы</option>
+                <option value="advertisement">Увидел рекламу</option>
+                <option value="recommendation">Посоветовали</option>
+                <option value="price-quality">Соотношение цены и качества</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="rating">Как Вы оцениваете наше заведение? (по 5-ти балльной системе)</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
+        </div>
+        <div class="form-group">
+            <label for="recommend">Рекомендовали бы Вы наше заведение своим знакомым?</label>
+            <select id="recommend" name="recommend">
+                <option value="yes">Да</option>
+                <option value="no">Нет</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="comments">Комментарии</label>
+            <textarea id="comments" name="comments" placeholder="Ваши отзывы и предложения..."></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit">Отправить</button>
+            <button type="reset">Очистить</button>
+        </div>
+    </form>
+    </fieldset>
+</div> 
+   
+</body>
+</html>

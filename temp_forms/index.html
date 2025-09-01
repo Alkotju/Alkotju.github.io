@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация подписчика</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="page0.html">Опросник ресторана</a></li>
+            <li><a href="page1.html">Плавание</a></li>     
+        </ul>
+    </nav>
+
+
+
+    <form>
+        <h1>Регистрация подписчика</h1>
+
+                <p>Как вас зовут?
+                <input type="text" id="full-name" name="full-name" required> </p>
+
+                <p>Страна проживания?
+                <input type="text" id="country" name="country" required> </p>
+
+                <p>Ваш адрес электронной почты:
+                <input type="email" id="email" name="email" required> </p>
+
+            <p>Ваш пол: 
+
+                <input type="radio" name="gender" value="male" required> Мужской
+                <input type="radio" name="gender" value="female"> Женский</p>
+
+            <p >Укажите возраст:
+            <input type="number" id="age" name="age" min="18" required></p>
+
+            <p>Ваш уровень владения компьютером:<br>
+
+                <input class=" " type="radio" name="computer-skill" value="beginner" required> Начальный<br>
+                <input type="radio" name="computer-skill" value="intermediate"> Средний<br>
+                <input type="radio" name="computer-skill" value="advanced"> Профессиональный<br>
+                <input type="radio" name="computer-skill" value="none"> Не владею</p>
+
+            <p>Откуда о нас узнали?
+            <select id="source" name="source" required>
+                <option value="">Выберите вариант</option>
+                <option value="internet">Интернет</option>
+                <option value="print">Печатные издания</option>
+                <option value="friends">Посоветовали знакомые</option>
+                <option value="ads">Рекламные объявления</option>
+            </select></p>
+
+            <p> Дополнительная информация:
+            <textarea id="additional-info" name="additional-info" rows="4"></textarea></p>
+
+            <p> Дата подписки:
+            <input type="date" id="subscription-date" name="subscription-date" required></p>
+
+
+            <button type="submit" class="submit-btn">Подписаться</button>
+            <button type="reset" class="reset-btn">Очистить</button>
+
+    </form>
+  
+    <footer>
+        <p>Aleksandra Kotjuzinskaja</p>
+    </footer>
+</div>
+</body>
+</html>
