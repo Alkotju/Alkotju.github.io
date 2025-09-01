@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML5</title>
+    <link rel="stylesheet" type="text/css" href="html.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header>
+            <h1>HTML5</h1>
+            <div class="img_header">
+                <img class="logo" src="images/html_logo2.png" alt="HTML5 logo">
+                <img class="logo" src="images/css_logo2.png" alt="CSS3 logo">
+                <img class="logo" src="images/bootstrap_logo2.png" alt="Bootstrap logo">
+                <img class="logo" src="images/angularjs_logo2.png" alt="AngularJS logo">
+            </div>
+        </header>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="html.html">HTML5</a></li>
+                <li><a href="css.html">CSS3</a></li>
+                <li><a href="bootstrap.html">Bootstrap</a></li>
+                <li><a href="angularjs.html">AngularJS</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="scroll-buttons">
+                <a href="#bottom" class="scroll-btn">К концу страницы</a>
+
+            </div>
+            <h2 id="top">HTML5 - ОСНОВЫ</h2>
+
+            <div class="toc">
+                <h3>Содержание:</h3>
+                <ul>
+                    <li><a href="#what-is-html">Что такое HTML?</a></li>
+                    <li><a href="#html-anatomy">Анатомия HTML элемента</a></li>
+                    <li><a href="#html-structure">Структура HTML документа</a></li>
+                    <li><a href="#html-history">История и развитие HTML5</a></li>
+                    <li><a href="#html-latest">Новые возможности HTML5</a></li>
+                </ul>
+            </div>
+
+            <section class="bottom_section">
+                <article class="bottom_article">
+                    <h3 class="main_h3" id="what-is-html">ЧТО ТАКОЕ HTML?</h3>
+                    <p><img class="article_img" src="images/html_logo3.png"><span class="html5_color">HTML</span> (Hypertext Markup Language) - это код, который используется для структурирования и отображения веб-страницы и её контента. Например, контент
+                        может быть структурирован внутри множества параграфов, маркированных списков или с использованием изображений и таблиц данных.</p>
+
+                    <p>HTML не является языком программирования; это язык разметки, и используется, чтобы сообщать вашему браузеру, как отображать веб-страницы, которые вы посещаете. Он может быть сложным или простым, в зависимости от того, как хочет веб-дизайнер.</p>
+                </article>
+            </section>
+
+            <section class="bottom_section">
+                <article class="bottom_article">
+                    <h3 class="main_h3" id="html-anatomy">АНАТОМИЯ HTML ЭЛЕМЕНТА</h3>
+                    <p>Главными частями HTML элемента являются:</p>
+                    <ul>
+                        <li><strong>Открывающий тег (Opening tag):</strong> Состоит из имени элемента, заключённого в открывающие и закрывающие угловые скобки. Открывающий тег указывает, где элемент начинается.</li>
+                        <li><strong>Закрывающий тег (Closing tag):</strong> Это то же самое, что и открывающий тег, за исключением того, что он включает в себя косую черту перед именем элемента.</li>
+                        <li><strong>Контент (Content):</strong> Это контент элемента, который в данном случае является просто текстом.</li>
+                        <li><strong>Элемент(Element):</strong> Открывающий тег, закрывающий тег и контент вместе составляют элемент.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="bottom_section">
+                <article class="bottom_article">
+                    <h3 class="main_h3" id="html-structure">СТРУКТУРА HTML ДОКУМЕНТА</h3>
+                    <p>HTML документ состоит из следующих основных частей:</p>
+                    <ul>
+                        <li><strong>&lt;!DOCTYPE html&gt;</strong> — доктайп. Указывает браузеру версию HTML.</li>
+                        <li><strong>&lt;html&gt;&lt;/html&gt;</strong> — элемент html. Этот элемент оборачивает весь контент на всей странице, и иногда известен как корневой элемент.</li>
+                        <li><strong>&lt;head&gt;&lt;/head&gt;</strong> — элемент head. Содержит метаинформацию о документе.</li>
+                        <li><strong>&lt;body&gt;&lt;/body&gt;</strong> — элемент body. В нем содержится весь контент, который вы хотите показывать пользователям.</li>
+                        <li><strong>&lt;meta charset="utf-8"&gt;</strong> — устанавливает UTF-8 кодировку документа.</li>
+                        <li><strong>&lt;title&gt;&lt;/title&gt;</strong> — устанавливает заголовок для страницы.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="bottom_section">
+                <article class="bottom_article">
+                    <h3 class="main_h3" id="html-history">История и развитие HTML5</h3>
+                    <p>HTML5 — это пятая версия языка гипертекстовой разметки, разработанная для структурирования и представления содержимого в интернете. Разработка HTML5 началась в 2004 году группой WHATWG в ответ на необходимость улучшения поддержки мультимедийных
+                        технологий и обеспечения обратной совместимости с предыдущими версиями HTML. Официальная рекомендация W3C по HTML5 была опубликована в октябре 2014 года, что ознаменовало новый этап в веб-разработке.</p>
+                    <p>Одной из ключевых целей HTML5 было улучшение поддержки мультимедиа без необходимости использования сторонних плагинов. В результате были введены новые элементы, такие как &lt;audio&gt; и &lt;video&gt;, позволяющие встраивать мультимедийный
+                        контент напрямую в веб-страницы. Кроме того, HTML5 расширил семантические возможности языка, введя элементы &lt;article&gt;, &lt;section&gt;, &lt;nav&gt; и другие, что способствует более четкой и понятной структуре веб-документов.</p>
+                    <p>С развитием HTML5 веб-разработчики получили мощный инструмент для создания современных, интерактивных и доступных веб-приложений, что значительно повысило качество пользовательского опыта в интернете.</p>
+                </article>
+            </section>
+
+            <section class="bottom_section">
+                <article class="bottom_article">
+                    <h3 class="main_h3" id="html-latest">НОВЫЕ ВОЗМОЖНОСТИ HTML5</h3>
+                    <p>HTML5 продолжает активно развиваться, и последние разработки значительно расширяют его функциональность:</p>
+
+                    <h4>Web Components</h4>
+                    <p>Web Components — это набор технологий, позволяющих создавать многоразовые пользовательские элементы с инкапсулированной функциональностью. Они включают:</p>
+                    <ul>
+                        <li><strong>Custom Elements</strong> — позволяют создавать собственные HTML-теги с уникальным поведением</li>
+                        <li><strong>Shadow DOM</strong> — обеспечивает инкапсуляцию стилей и структуры компонентов</li>
+                        <li><strong>HTML Templates</strong> — элемент <code>&lt;template&gt;</code> позволяет хранить HTML-разметку для последующего использования</li>
+                    </ul>
+
+                    <pre>
+&lt;template id="my-paragraph"&gt;
+  &lt;p&gt;Мой переиспользуемый параграф&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+  class MyParagraph extends HTMLElement {
+    constructor() {
+      super();
+      const template = document.getElementById('my-paragraph');
+      const templateContent = template.content;
+      this.attachShadow({mode: 'open'}).appendChild(
+        templateContent.cloneNode(true)
+      );
+    }
+  }
+  customElements.define('my-paragraph', MyParagraph);
+&lt;/script&gt;
+                    </pre>
+
+                    <h4>Progressive Web Apps (PWA)</h4>
+                    <p>Progressive Web Apps позволяют создавать веб-приложения, которые ведут себя как нативные. Они используют современные API HTML5:</p>
+                    <ul>
+                        <li><strong>Service Workers</strong> — обеспечивают работу офлайн и кэширование ресурсов</li>
+                        <li><strong>Web App Manifest</strong> — позволяет установить веб-приложение на домашний экран устройства</li>
+                        <li><strong>Push Notifications</strong> — отправляет уведомления даже когда сайт не открыт</li>
+                    </ul>
+
+                    <h4>Новые API HTML5</h4>
+                    <ul>
+                        <li><strong>WebAssembly (WASM)</strong> — позволяет запускать код, написанный на C++, Rust и других языках, в браузере с почти нативной производительностью</li>
+                        <li><strong>Web Bluetooth API</strong> — обеспечивает подключение к устройствам Bluetooth прямо из браузера</li>
+                        <li><strong>WebXR</strong> — обеспечивает поддержку виртуальной и дополненной реальности</li>
+                        <li><strong>WebAuthn</strong> — позволяет использовать биометрию для аутентификации вместо паролей</li>
+                    </ul>
+                </article>
+            </section>
+            <div id="bottom" class="scroll-buttons">
+                <a href="#top" class="scroll-btn">К началу страницы</a>
+            </div>
+        </main>
+
+        <aside class="news">
+            <h2>Преимущества HTML5</h2>
+            <article>
+                <h3 class="news_h3">Новые семантические элементы</h3>
+                <p>HTML5 вводит новые семантические элементы, такие как &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;, &lt;section&gt;, которые делают структуру страницы более понятной.</p>
+            </article>
+            <article>
+                <h3 class="news_h3">Мультимедиа поддержка</h3>
+                <p>HTML5 включает встроенную поддержку аудио и видео контента без необходимости использования плагинов. Теги &lt;audio&gt; и &lt;video&gt; упрощают добавление мультимедиа на сайт.</p>
+            </article>
+            <article>
+                <h3 class="news_h3">Canvas для графики</h3>
+                <p>Элемент &lt;canvas&gt; позволяет рисовать графику с помощью JavaScript, что открывает широкие возможности для создания интерактивной графики и анимаций.</p>
+            </article>
+        </aside>
+
+        <footer>
+            <p>Дата создания 2024-10-30</p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS3</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header>
+            <div class="img_header">
+                <img class="logo" src="images/html_logo2.png" alt="HTML5 logo">
+                <img class="logo" src="images/css_logo2.png" alt="CSS3 logo">
+            </div>
+            <h1>CSS3</h1>
+            <div class="img_header">
+                <img class="logo" src="images/bootstrap_logo2.png" alt="Bootstrap logo">
+                <img class="logo" src="images/angularjs_logo2.png" alt="AngularJS logo">
+            </div>
+        </header>
+
+
+        <aside class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="html.html">HTML5</a></li>
+                    <li><a href="css.html">CSS3</a></li>
+                    <li><a href="bootstrap.html">Bootstrap</a></li>
+                    <li><a href="angularjs.html">AngularJS</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <div class="scroll-buttons">
+                <a href="#bottom" class="scroll-btn">К концу страницы</a>
+
+            </div>
+            <h2 id="top">CSS3 - ОСНОВЫ</h2>
+
+            <div class="toc">
+                <h3>Содержание:</h3>
+                <ul>
+                    <li><a href="#what-is-css">Что такое CSS?</a></li>
+                    <li><a href="#css-syntax">Синтаксис CSS</a></li>
+                    <li><a href="#css-working">Как работает CSS?</a></li>
+                    <li><a href="#css-evolution">Эволюция и возможности CSS3</a></li>
+                    <li><a href="#css-latest">Инновации и тренды в CSS</a></li>
+                </ul>
+            </div>
+
+            <section class="bottom_section">
+                <article class="bottom_article">
+                    <h3 class="main_h3" id="what-is-css">ЧТО ТАКОЕ CSS?</h3>
+                    <p><img class="article_img" src="images/css_logo3.png"><span class="css_color">CSS</span> (Каскадные таблицы стилей) позволяет создавать великолепно выглядящие веб-страницы. CSS — это язык для определения того, как документы представляются
+                        пользователям — как они оформляются, размещаются и т. д.</p>
+
+                    <p>В модуле Основы HTML мы рассмотрели, что такое HTML и как он используется для разметки документов. Эти документы будут доступны для чтения в веб-браузере. Заголовки будут выглядеть больше, чем обычный текст, абзацы разбиваются на новую
+                        строку и будут иметь пространство между друг другом. То, что вы видите, — это стили браузера по умолчанию. Используя CSS, вы можете до мелочей контролировать, как элементы HTML выглядят в браузере.</p>
+                </article>
+            </section>
+
+            <section class="bottom_section">
+                <article class="bottom_article">
+                    <h3 class="main_h3" id="css-syntax">СИНТАКСИС CSS</h3>
+                    <p>CSS — это язык на основе правил: вы задаёте правила, определяющие группы стилей, которые должны применяться к определённым элементам или группам элементов на вашей веб-странице. Например:</p>
+
+                    <pre>
+h1 {
+  color: red;
+  font-size: 5em;
+}
+                    </pre>
+
+                    <p>Правило открывается с помощью селектора. Этот селектор выбирает HTML-элемент, который мы собираемся стилизовать. Затем у нас есть набор фигурных скобок { }. Внутри них будет один или несколько объявлений, которые принимают форму пары
+                        свойства и его значения.</p>
+                </article>
+            </section>
+
+            <section class="bottom_section">
+                <article class="bottom_article">
+                    <h3 class="main_h3" id="css-working">КАК РАБОТАЕТ CSS?</h3>
+                    <p>Когда браузер отображает документ, он должен совместить его содержимое с его стилями. Этот процесс идёт в несколько этапов:</p>
+
+                    <ol>
+                        <li>Браузер получает HTML-страницу (например, из Интернета)</li>
+                        <li>Преобразует HTML в DOM (Document Object Model)</li>
+                        <li>Затем браузер забирает все ресурсы и описания, связанные с HTML-документом</li>
+                        <li>Браузер анализирует полученный CSS код, сортирует описанные там правила</li>
+                        <li>Дерево представления (render tree) формируется в том порядке, в каком оно затем должно будет отображаться</li>
+                        <li>Затем происходит визуальное отображение контента на странице (этот этап называется «отрисовкой»)</li>
+                    </ol>
+                </article>
+            </section>
+
+            <section class="bottom_section">
+                <article class="bottom_article">
+                    <h3 class="main_h3" id="css-evolution">Эволюция и возможности CSS3</h3>
+                    <p>CSS3 — это третья версия каскадных таблиц стилей, предназначенная для описания внешнего вида документов, написанных с использованием языков разметки. Первая версия CSS была представлена в 1996 году и включала базовые возможности по
+                        стилизации текста, фонов и границ. С течением времени CSS эволюционировал, и в CSS3 были введены значительные улучшения и новые функции.</p>
+                    <p>Одним из ключевых нововведений CSS3 стало модульное построение, позволяющее разрабатывать и обновлять отдельные части спецификации независимо друг от друга. Это ускорило внедрение новых возможностей и улучшило совместимость между различными
+                        браузерами. Среди новых функций CSS3 можно выделить поддержку анимаций, переходов, градиентов, теней, а также медиазапросов, которые позволяют создавать адаптивный дизайн, подстраивающийся под различные устройства и размеры экранов.</p>
+                    <p>Благодаря этим улучшениям, CSS3 значительно расширил возможности веб-дизайна, позволяя создавать более динамичные, привлекательные и удобные для пользователя интерфейсы без необходимости использования сложных скриптов или сторонних
+                        технологий.
+                    </p>
+                </article>
+            </section>
+
+            <section class="bottom_section">
+                <article class="bottom_article">
+                    <h3 class="main_h3" id="css-latest">ИННОВАЦИИ И ТРЕНДЫ В CSS</h3>
+                    <p>Последние годы CSS развивается особенно быстро, предлагая разработчикам мощные инструменты для создания современных интерфейсов:</p>
+
+                    <h4>Container Queries</h4>
+                    <p>В отличие от медиа-запросов, которые основаны на размере экрана, Container Queries позволяют стилизовать элементы на основе размера их родительского контейнера:</p>
+
+                    <pre>
+@container (min-width: 700px) {
+  .card {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+                    </pre>
+
+                    <p>Это революционное изменение в способе создания действительно адаптивных компонентов.</p>
+
+                    <h4>CSS Subgrid</h4>
+                    <p>Subgrid позволяет дочерним элементам сетки наследовать и выравниваться по линиям родительской сетки, что значительно упрощает создание сложных макетов:</p>
+
+                    <pre>
+.parent-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.child-grid {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+                    </pre>
+
+                    <h4>Логические свойства и значения</h4>
+                    <p>Вместо свойств, привязанных к физическим направлениям (top, right, bottom, left), логические свойства основаны на направлении текста:</p>
+
+                    <pre>
+.box {
+  margin-block-start: 1em;    /* вместо margin-top */
+  margin-inline-end: 1em;     /* вместо margin-right в LTR или margin-left в RTL */
+  padding-block-end: 1em;     /* вместо padding-bottom */
+  padding-inline-start: 1em;  /* вместо padding-left в LTR или padding-right в RTL */
+}
+                    </pre>
+
+                    <h4>Color функции и пространства</h4>
+                    <p>Новые цветовые функции позволяют создавать более гибкие и адаптивные цветовые схемы:</p>
+                    <ul>
+                        <li><code>color-mix()</code> — для программного смешивания цветов</li>
+                        <li><code>color-contrast()</code> — для автоматического выбора наиболее контрастного цвета</li>
+                        <li>Новые цветовые пространства: <code>oklch()</code>, <code>lab()</code>, <code>lch()</code> с лучшим восприятием и гаммой цветов</li>
+                    </ul>
+
+                    <h4>CSS Nesting</h4>
+                    <p>Встроенная поддержка вложенности стилей без использования препроцессоров:</p>
+
+                    <pre>
+.card {
+  background: white;
+  
+  & .title {
+    font-size: 1.5em;
+    
+    &:hover {
+      color: blue;
+    }
+  }
+}
+                    </pre>
+                </article>
+            </section>
+            <div id="bottom" class="scroll-buttons">
+                <a href="#top" class="scroll-btn">К началу страницы</a>
+
+            </div>
+        </main>
+
+        <aside class="news">
+            <h2>Возможности CSS3</h2>
+            <article>
+                <h3 class="news_h3">Анимации и переходы</h3>
+                <p>CSS3 позволяет создавать анимации и плавные переходы между состояниями элементов без использования JavaScript или Flash, что делает сайты более интерактивными и привлекательными.</p>
+            </article>
+            <article>
+                <h3 class="news_h3">Гибкие макеты</h3>
+                <p>Flexbox и Grid Layout - мощные системы макетов, которые позволяют создавать сложные и адаптивные дизайны с минимальным количеством кода.</p>
+            </article>
+            <article>
+                <h3 class="news_h3">Трансформации и эффекты</h3>
+                <p>CSS3 включает возможности для трансформации элементов (вращение, масштабирование), создания теней, градиентов и прозрачности, что существенно расширяет возможности дизайна.</p>
+            </article>
+        </aside>
+        <footer>
+            <p>Дата создания 2024-10-30</p>
+        </footer>
+    </div>
+</body>
+
+</html>

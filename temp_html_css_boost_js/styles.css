@@ -1,0 +1,187 @@
+.wrapper {
+    width: 1380px;
+    margin: auto;
+    font-family: Arial;
+}
+
+
+header {
+    width: 1388px;
+    margin-left: 33px;
+    float: left;
+}
+
+
+h1 {
+    text-align: center;
+    float: left;
+    width: 930px;
+    font-size: 37px;
+    color: #FF0000;
+    letter-spacing: 6px;
+    -webkit-text-stroke: 1px #131386;
+    text-shadow: 4px 4px 2px #FFFFFF, 6px 6px 2px darkblue, 7px 7px 2px #FF0000;
+}
+
+
+.img_header {
+    width: 190px;
+    float: left;
+}
+
+
+.logo {
+    width: 65px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 65px;
+    border: inset #88cee9 3px;
+    box-shadow: 1px 2px 4px #5a8799;
+}
+
+
+.navigation {
+    width: 200px;
+    float: left;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 60px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+
+main {
+    width: 800px;
+    float: left;
+}
+
+
+h2 {
+   text-align: center;
+    color: darkblue;
+    font-size: 25px;
+}
+
+
+section {
+    width: 395px;
+    float: left;
+}
+
+
+article {
+    height: 200px;
+    text-align: justify;
+}
+
+
+article p {
+    padding: 0px 10px;
+    font-family: 'Times New Roman';
+}
+
+
+h3 {
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 0px #08005F, -1px -1px 0px #08005F, 1px -1px 0px #08005F, -1px 1px 0px #08005F;
+}
+
+
+.main_h3 {
+    background: linear-gradient(to top,red,#131386,white);
+}
+
+
+section article h3 {
+    font-size: 18px;
+ 
+}
+
+
+.article_img {
+    width: 32px;
+    float: left;
+    margin-right: 5px;
+}
+
+
+span {
+    font-weight: 600;
+    font-family: Tahoma;
+}
+
+
+.angularjs_color {
+    color: red;
+}
+
+
+.css_color {
+    color: blue;
+}
+
+
+.bootstrap_color {
+    color: purple;
+}
+
+
+.html5_color {
+    color: orangered;
+}
+
+
+.right_column {
+    margin-left: 10px;
+}
+
+
+.bottom_section {
+    width: 800px;
+    background-color: darkblue;
+    margin-bottom: 20px;
+}
+
+
+.bottom_article {
+    width: 780px;
+    height: auto;
+    margin: 20px 10px;
+    color: darkblue;
+    background-color: white;
+}
+
+
+.news {
+    width: 254px;
+    float: left;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+}
+
+
+.news_h3 {
+    font-family: 'Times New Roman';
+    background-color: darkblue;
+}
+
+
+.news article {
+    height: auto;
+    color: darkblue;
+}
+
+
+footer {
+    width: 100%;
+    max-width: 1380px;
+    margin: 150px auto 30px;
+    clear: both;
+    font-weight: 700;
+    color: darkblue;
+    text-align: center;
+    text-shadow: 2px 2px 5px #7DD0FF;
+}

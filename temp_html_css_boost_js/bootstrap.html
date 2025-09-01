@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header>
+            <div class="img_header">
+                <img class="logo" src="images/html_logo2.png" alt="HTML5 logo">
+                <img class="logo" src="images/css_logo2.png" alt="CSS3 logo">
+            </div>
+            <h1>Bootstrap</h1>
+            <div class="img_header">
+                <img class="logo" src="images/bootstrap_logo2.png" alt="Bootstrap logo">
+                <img class="logo" src="images/angularjs_logo2.png" alt="AngularJS logo">
+            </div>
+        </header>
+
+
+        <aside class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="html.html">HTML5</a></li>
+                    <li><a href="css.html">CSS3</a></li>
+                    <li><a href="bootstrap.html">Bootstrap</a></li>
+                    <li><a href="angularjs.html">AngularJS</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+
+        <main>
+            <div class="scroll-buttons">
+                <a href="#bottom" class="scroll-btn">К концу страницы</a>
+
+            </div>
+            <h2 id="top">BOOTSTRAP - ОСНОВЫ</h2>
+
+            <div class="toc">
+                <h3>Содержание:</h3>
+                <ul>
+                    <li><a href="#what-is-bootstrap">Что такое Bootstrap?</a></li>
+                    <li><a href="#bootstrap-elements">Bootstrap как набор готовых элементов</a></li>
+                    <li><a href="#bootstrap-advantages">Плюсы использования Bootstrap</a></li>
+                    <li><a href="#bootstrap-history">Появление и развитие Bootstrap</a></li>
+                    <li><a href="#bootstrap-latest">Bootstrap 5 и перспективы развития</a></li>
+                </ul>
+            </div>
+
+            <section class="bottom_section">
+                <article class="bottom_article">
+                    <h3 class="main_h3" id="what-is-bootstrap">ЧТО ТАКОЕ BOOTSTRAP?</h3>
+                    <p><img class="article_img" src="images/bootstrap_logo3.png"><span class="bootstrap_color">BOOTSTRAP</span> (так же известен как <i>Twitter Bootstrap</i>) - свободный набор инструментов для создания сайтов и веб-приложений. Включает в
+                        себя HTML и CSS шаблоны оформления для типографики, веб-форм, кнопок, меток, блоков навигации и прочих компонентов веб-интерфейса, включая JavaScript-расширения.</p>
+
+                    <p>В 2010 году в недрах компании Twitter появился проект Twitter Blueprint. Его задачей было создание системы для разработки новых компонентов внутри компании. В этом же году на Twitter Hack Week проект обрёл первую популярность. Его
+                        заметили не только внутри компании, но и за её пределами. Уже в 2011 году проект вышел в открытый доступ под названием Bootstrap.</p>
+                </article>
+            </section>
+
+            <section class="bottom_section">
+                <article class="bottom_article">
+                    <h3 class="main_h3" id="bootstrap-elements">BOOTSTRAP КАК НАБОР ГОТОВЫХ ЭЛЕМЕНТОВ</h3>
+                    <p>Одной из сторон Bootstrap является то, что его можно использовать исключительно как набор уже готовых элементов. Для этого не требуется серьёзных знаний HTML и CSS — достаточно уметь создавать самые простые страницы и прочитать документацию.
+                        Например, для создания кнопки используются два класса:</p>
+
+                    <pre>&lt;button class="btn btn-primary"&gt;Я — синяя кнопка&lt;/button&gt;</pre>
+
+                    <p>Второй подход, который используется в Bootstrap — Atomic CSS. На нём построены утилиты во фреймворке. Atomic CSS — подход, при котором один класс использует одно свойство.</p>
+
+                    <pre>&lt;section class="d-flex bg-white"&gt;
+  &lt;!-- HTML вёрстка --&gt;
+&lt;/section&gt;</pre>
+
+                    <p>В этом примере тег &lt;section&gt; получит два свойства: background-color: #fff; и display: flex;.</p>
+                </article>
+            </section>
+
+            <section class="bottom_section">
+                <article class="bottom_article">
+                    <h3 class="main_h3" id="bootstrap-advantages">ПЛЮСЫ ИСПОЛЬЗОВАНИЯ BOOTSTRAP</h3>
+                    <ul>
+                        <li><strong>Скорость</strong> - Используя готовые компоненты и утилиты Bootstrap, можно быстро ввести новый функционал на сайт.</li>
+                        <li><strong>Кроссбраузерность</strong> - Компоненты Bootstrap учитывают различия браузеров и оптимизированы таким образом, чтобы минимизировать различия между ними.</li>
+                        <li><strong>Адаптивность</strong> - Bootstrap имеет готовую 12-колоночную сетку, по которой можно располагать компоненты.</li>
+                        <li><strong>Доступность</strong> - Разработчики уделяют внимание использованию страниц с компонентами людьми с ограниченными возможностями.</li>
+                        <li><strong>Низкий порог вхождения</strong> - Создание страницы по компонентам не требует экспертного знания HTML и CSS.</li>
+                    </ul>
+                </article>
+            </section>
+
+
+            <section class="bottom_section">
+                <article class="bottom_article">
+                    <h3 class="main_h3" id="bootstrap-history">Появление и развитие Bootstrap</h3>
+                    <p>Bootstrap — это популярный фреймворк для разработки адаптивных и мобильных веб-проектов, основанный на HTML, CSS и JavaScript. Изначально разработанный как внутренняя библиотека компании Twitter под названием Twitter Blueprint, Bootstrap
+                        был выпущен в открытый доступ 19 августа 2011 года. С тех пор он стал одним из наиболее широко используемых инструментов для создания современных веб-интерфейсов.</p>
+                    <p>Одной из ключевых особенностей Bootstrap является его 12-колоночная система сетки, представленная во второй версии фреймворка в 2012 году. Эта система позволяет разработчикам легко создавать сложные макеты, которые автоматически адаптируются
+                        к различным размерам экранов и устройствам. Кроме того, Bootstrap предоставляет широкий набор готовых компонентов, таких как кнопки, формы, навигационные панели и карусели, что значительно ускоряет процесс разработки и обеспечивает
+                        единообразие дизайна.</p>
+                    <p>С выходом пятой версии Bootstrap разработчики отказались от зависимости от jQuery, улучшили поддержку современных технологий и добавили новые компоненты, что делает фреймворк еще более мощным и гибким инструментом для веб-разработки.</p>
+                </article>
+            </section>
+
+            <section class="bottom_section">
+                <article class="bottom_article">
+                    <h3 class="main_h3" id="bootstrap-latest">BOOTSTRAP 5 И ПЕРСПЕКТИВЫ РАЗВИТИЯ</h3>
+                    <p>Bootstrap продолжает эволюционировать, сохраняя свою позицию как один из самых популярных CSS-фреймворков:</p>
+
+                    <h4>Отказ от jQuery в Bootstrap 5</h4>
+                    <p>В Bootstrap 5 полностью переписаны все JS-компоненты с использованием нативного JavaScript:</p>
+                    <ul>
+                        <li>Значительное уменьшение размера фреймворка и повышение производительности</li>
+                        <li>Более простая интеграция с современными JavaScript-фреймворками</li>
+                        <li>Улучшенная поддержка современных API браузеров</li>
+                    </ul>
+
+                    <h4>Улучшенная кастомизация через SASS переменные</h4>
+                    <p>Bootstrap 5 предлагает более гибкий подход к кастомизации:</p>
+
+                    <pre>
+$primary: #0074d9;
+$border-radius: 0.5rem;
+$enable-shadows: true;
+$enable-gradients: true;
+
+@import "bootstrap/scss/bootstrap";
+                    </pre>
+
+                    <h4>Новые компоненты и утилиты</h4>
+                    <ul>
+                        <li><strong>Offcanvas</strong> — сайдбары, выезжающие с любой стороны экрана</li>
+                        <li><strong>Accordion</strong> — улучшенный компонент для создания списков с раскрывающимся содержимым</li>
+                        <li><strong>Utilities API</strong> — система для создания собственных служебных классов</li>
+                    </ul>
+
+                    <pre>
+&lt;div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"&gt;
+  &lt;div class="offcanvas-header"&gt;
+    &lt;h5 class="offcanvas-title"&gt;Меню&lt;/h5&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas"&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="offcanvas-body"&gt;
+    &lt;p&gt;Содержимое выезжающего меню&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                    </pre>
+
+                    <h4>Bootstrap-иконки и интеграция с SVG</h4>
+                    <p>Официальная библиотека SVG-иконок для Bootstrap с более чем 1,600 иконками:</p>
+
+                    <pre>
+&lt;i class="bi bi-alarm"&gt;&lt;/i&gt;
+&lt;i class="bi bi-cloud-download"&gt;&lt;/i&gt;
+                    </pre>
+
+                    <h4>Web Components и будущее Bootstrap</h4>
+                    <p>Bootstrap экспериментирует с Web Components, предлагая компоненты, которые работают на любой платформе без зависимостей:</p>
+
+                    <pre>
+&lt;bootstrap-card&gt;
+  &lt;img slot="image" src="..." alt="..."&gt;
+  &lt;span slot="title"&gt;Заголовок карточки&lt;/span&gt;
+  &lt;span slot="text"&gt;Текст карточки...&lt;/span&gt;
+  &lt;a slot="button" href="#"&gt;Подробнее&lt;/a&gt;
+&lt;/bootstrap-card&gt;
+                    </pre>
+                </article>
+            </section>
+            <div id="bottom" class="scroll-buttons">
+                <a href="#top" class="scroll-btn">К началу страницы</a>
+
+            </div>
+        </main>
+
+        <aside class="news">
+            <h2>Возможности Bootstrap</h2>
+            <article>
+                <h3 class="news_h3">Grid система</h3>
+                <p>12-колоночная сетка Bootstrap позволяет создавать отзывчивые макеты, которые адаптируются к различным размерам экрана - от мобильных устройств до широкоформатных мониторов.</p>
+            </article>
+            <article>
+                <h3 class="news_h3">Готовые компоненты</h3>
+                <p>Bootstrap предоставляет множество готовых компонентов - навигационные панели, карточки, формы, кнопки, модальные окна и многое другое, что значительно ускоряет процесс разработки.</p>
+            </article>
+            <article>
+                <h3 class="news_h3">JavaScript плагины</h3>
+                <p>Встроенные JavaScript плагины добавляют интерактивность компонентам без необходимости писать сложный код: карусели, выпадающие меню, всплывающие подсказки и многое другое.</p>
+            </article>
+        </aside>
+        <footer>
+            <p>Дата создания 2024-10-30</p>
+        </footer>
+    </div>
+</body>
+
+</html>
