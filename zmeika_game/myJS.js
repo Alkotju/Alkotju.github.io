@@ -1,7 +1,7 @@
 // Глобальные переменные
-var FIELD_SIZE_X = 20; // строки
-var FIELD_SIZE_Y = 20; // столбцы
-var SNAKE_SPEED = 300; //Интервал между перемещениями змейки
+var FIELD_SIZE_X = 40; // строки
+var FIELD_SIZE_Y = 40; // столбцы
+var SNAKE_SPEED = 200; //Интервал между перемещениями змейки
 var snake = []; // Сама змейка
 var direction = 'y+'; // направление движения змейки
 var gameIsRunning = false // Проверка запущена ли игра
@@ -14,7 +14,7 @@ function init(){
 
     var wrap = document.getElementsByClassName('wrap')[0];
 
-    wrap.style.width = '400px';
+    wrap.style.width = '800px';
     //события кнопок Start and New Game
     document.getElementById('snake-start').addEventListener('click', startGame);
     document.getElementById('snake-renew').addEventListener('click', refreshGame);
@@ -117,7 +117,7 @@ function prepareGameField(){
     }
     else if (direction == 'y-'){
         new_unit = document.getElementsByClassName('cell-' + (coord_y + 1) + '-' + (coord_x))[0];
-    }  // !перепроверить координаты, почему если х+, то новый юнит +1,  а если у+, то новый юнит -1      
+    }   
 
     //Проверки
     //1)  new_unit не часть змейки
@@ -172,6 +172,7 @@ function haveFood(unit){
     if (unit_classes.includes('food-unit')){
         check = true;
         createFood();
+        createFood();//бесконечная еда
 
         score++;
     }
