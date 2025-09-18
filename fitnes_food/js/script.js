@@ -1,3 +1,20 @@
+import tabs from './modules/tabs';
+import modal from './modules/modal';
+import timer from './modules/timer';
+import cards from './modules/cards';
+import calc from './modules/calc';
+import forms from './modules/forms';
+import slider from './modules/slider';
+import {openModal} from './modules/modal'
+
+
+
+
+
+
+
+
+
 window.addEventListener('DOMContentLoaded', function(){// когда загрузилась вся страница
 
     //tabs
@@ -137,52 +154,7 @@ window.addEventListener('DOMContentLoaded', function(){// когда загру�
 
     //ispolzuem klass6 dlja sozdanija menu
 
-    class MenuCard {
-        constructor(src, alt, title, descr, price, parentSelector, ...classes) {
-            this.src = src;
-            this.alt = alt;
-            this.title = title;
-            this.src = src;
-            this.descr = descr;
-            this.price = price;
-            this.classes = classes;
-            this.parent = document.querySelector(parentSelector);
-            this.transfer = 1;
-            this.changeToUSD();
-        }
-        changeToUSD(){
-            this.price = this.price * this.transfer
-        }
-
-        render() {
-            const element = document.createElement('div');
-            if (this.classes.length === 0) {
-                this.classes = "menu__item";
-                element.classList.add(this.classes);
-            } else {
-                this.classes.forEach(className => element.classList.add(className));
-            }
-
-            element.innerHTML = `
-            <img src=${this.src} alt=${this.src}>
-            <h3 class="menu__item-subtitle">${this.title}</h3>
-            <div class="menu__item-descr">${this.descr}</div>
-            <div class="menu__item-divider"></div>
-            <div class="menu__item-price">
-                <div class="menu__item-cost">Ценa: </div>
-                <div class="menu__item-total"><span>${this.price}</span> EUR/ день</div>
-            </div>
-            `;
-            this.parent.append(element);
-        }
-    }
-
-    getResource('http://localhost:3000/menu')
-    .then(data => {
-        data.forEach(({img, altimg, title, descr, price}) => {
-            new MenuCard(img, altimg, title, descr, price, ".menu .container").render();
-        });
-    });
+    
 
     // new MenuCard(
     //     "img/tabs/vegy.jpg",
@@ -451,111 +423,6 @@ window.addEventListener('DOMContentLoaded', function(){// когда загру�
     }
 
     //calculator
-    const result = document.querySelector('.calculating__result.span');
-
-    let sex, height, weight, age, ratio;
-
-    if (localStorage.getItem('sex')) {
-        sex = localStorage.getItem('sex');
-    } else {
-        sex = 'female';
-        localStorage.setItem('sex', 'female');
-    }
-
-    if (localStorage.getItem('ratio')) {
-        ratio = localStorage.getItem('ratio');
-    } else {
-        ratio = 1.375;
-        localStorage.setItem('ratio', 1.375);
-    }
-
-    function calcTotal() {
-        if(!sex || !height || !weight || !age || !ratio) {
-            result.textContent = '____'
-            return;
-        }
-        if (sex === 'female') {
-            result.textContent = Math.round((447.6 + ( 9.2 * weight) + (3.1 * height) - (4.3 * age)) * ratio );
-        } else{
-            result.textContent = Math.round((88.36 + ( 13.4 * weight) + (4.8 * height) - (5.7 * age)) * ratio );
-        }
-    }
     
-    calcTotal();
-
-    function initLocalSettings(selector, activeClass){
-        const elements = document.querySelectorAll(selector);
-
-        elements.forEach(elem => {
-            elem.classList.remove(activeClass);
-            if (elem.getAttribute('id') === localStorage.getItem('sex')){
-                elem.classList.add(activeClass);
-            }
-            if (elem.getAttribute('data-ratio') === localStorage.getItem('ratio')) {
-                elem.classList.add(activeClass);
-            }
-        });
-    }
-    initLocalSettings('#gender div', 'calculating__choose-item_active');
-    initLocalSettings('.calculating__choose_big div', 'calculating__choose-item_active');
-
-    function getStaticInformation(selector, activeClass) {
-        const elements = document.querySelectorAll(selector);
-
-        elements.forEach(elem => {
-            elem.addEventListener('click', (e) => {
-                if (e.target.getAttribute('data-ratio')){
-                    ratio = +e.target.getAttribute('data-ratio');
-                    localStorage.setItem('ratio', +e.target.getAttribute('data-ratio'));
-                } else {
-                    sex = e.target.getAttribute('id');
-                    localStorage.setItem('sex', +e.target.getAttribute('id'));
-                }
-
-
-                elements.forEach(elem => {
-                    elem.classList.remove(activeClass);
-                });
-
-
-                e.target.classList.add(activeClass);
-
-                calcTotal();
-            });
-        });
-    }
-
-    getStaticInformation('#gender div', 'calculating__choose-item_active');
-    getStaticInformation('.calculating__choose_big div', 'calculating__choose-item_active');
-
-    function getDynamicInfirmation(selector){
-        const input = document.querySelector(selector);
-
-        input.addEventListener('input', () => {
-            if (input.value.match(/\D/g)) {
-                input.style.border = "1px solid red";
-
-            } else {
-                input.style.border = 'none';
-            }
-            switch(input.getAttribute('id')) {
-                case "height":
-                    height = +input.value;
-                    break;
-                case "weight":
-                    weight = +input.value;
-                    break;
-                case "age":
-                    age = +input.value;
-                    break;
-                
-            }
-
-            calcTotal();
-        });
-    }
-    getDynamicInfirmation('#height');
-    getDynamicInfirmation('#weight');
-    getDynamicInfirmation('#age');
 
 });
