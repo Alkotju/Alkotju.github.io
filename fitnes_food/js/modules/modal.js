@@ -4,7 +4,6 @@ function closeModal(modalSelector){
     modal.classList.add('hide');
     modal.classList.remove('show');
     document.body.style.overflow = '';
-
 }
 
 function openModal(modalSelector, modalTimerId){
