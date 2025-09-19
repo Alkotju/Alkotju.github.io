@@ -7,8 +7,27 @@ import forms from './modules/forms';
 import slider from './modules/slider';
 import {openModal} from './modules/modal'
 
-
 window.addEventListener('DOMContentLoaded', function(){// когда загрузилась вся страница
+    const modalTimerId = setTimeout(() => openModal('.modal', modalTimerId), 50000);
+
+    tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__items_active');
+    modal('[data-modal]', '.modal', modalTimerId);
+    timer('.timer', '2025-12-25');
+    cards();
+    calc();
+    forms('form', modalTimerId);
+    slider({
+        container: '.offer_slider',
+        slide: '.offer__slide',
+        nextArrow: '.offer__slider-next',
+        prewArrow: '.offer__slider-prev',
+        totalCounter: '#total',
+        currentCounter: '#curent',
+        wrapper: '.offer__slider-wrapper',
+        field: '.offr__slider-inner'
+    });
+});
+
 
     //tabs
     // let tabs = document.querySelectorAll('.tabheader__item'),
@@ -17,6 +36,7 @@ window.addEventListener('DOMContentLoaded', function(){// когда загру�
 
     //timer
     // const deadline = '2025-12-25';
+    
     //Modal
     //ispolzuem klass6 dlja sozdanija menu
     // new MenuCard(
@@ -28,9 +48,3 @@ window.addEventListener('DOMContentLoaded', function(){// когда загру�
     //     9,
     //     ".menu .container"
     // ).render();
-
-    // Slider
-
-    
-
-});
