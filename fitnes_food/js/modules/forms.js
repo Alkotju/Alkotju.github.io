@@ -1,8 +1,8 @@
 import {closeModal, openModal} from './modal';
 import {postData} from '../services/services';
-function forms(formSelector, modalTimerId){
+function forms(formsSelector, modalTimerId){
 
-    const forms = document.querySelectorAll('formsSelector');
+    const forms = document.querySelectorAll(formsSelector);
     const message = {
         loading: 'img/form/spinner.svg',
         success: 'Благодарим за заказ! Скоро мы с вами свяжемся',

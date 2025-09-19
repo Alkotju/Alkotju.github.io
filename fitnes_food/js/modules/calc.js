@@ -52,12 +52,12 @@ function calc(){
 
         elements.forEach(elem => {
             elem.addEventListener('click', (e) => {
-                if (e.target.getAttribute('data-ratio')){
+                if (e.target.getAttribute('data-ratio')) {
                     ratio = +e.target.getAttribute('data-ratio');
                     localStorage.setItem('ratio', +e.target.getAttribute('data-ratio'));
                 } else {
                     sex = e.target.getAttribute('id');
-                    localStorage.setItem('sex', +e.target.getAttribute('id'));
+                    localStorage.setItem('sex', e.target.getAttribute('id'));
                 }
 
 

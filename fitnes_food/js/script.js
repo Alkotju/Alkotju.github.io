@@ -10,7 +10,7 @@ import {openModal} from './modules/modal'
 window.addEventListener('DOMContentLoaded', function(){// когда загрузилась вся страница
     const modalTimerId = setTimeout(() => openModal('.modal', modalTimerId), 50000);
 
-    tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__items_active');
+    tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
     modal('[data-modal]', '.modal', modalTimerId);
     timer('.timer', '2025-12-25');
     cards();
@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', function(){// когда загру�
         totalCounter: '#total',
         currentCounter: '#curent',
         wrapper: '.offer__slider-wrapper',
-        field: '.offr__slider-inner'
+        field: '.offer__slider-inner'
     });
 });
 

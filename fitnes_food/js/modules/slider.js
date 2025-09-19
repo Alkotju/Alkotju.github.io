@@ -10,9 +10,9 @@ function slider({container, slide, nextArrow, prewArrow, totalCounter, currentCo
     current = document.querySelector(currentCounter),
     slidesWrapper = document.querySelector(wrapper),
     width = window.getComputedStyle(slidesWrapper).width,
-    slidesField = this.document.querySelector(field);
+    slidesField = document.querySelector(field);
     
-    if (slides.lenght < 10) {
+    if (slides.length < 10) {
         total.textContent = `0${slides.length}`;
         current.textContent = `0${slideIndex}`;
     } else {
@@ -32,7 +32,7 @@ function slider({container, slide, nextArrow, prewArrow, totalCounter, currentCo
 
     slider.style.position = 'relative';
 
-    const indicators = this.document.createElement('ol'),
+    const indicators = document.createElement('ol'),
     dots = [];
     indicators.classList.add('carrousel-indicators');
     indicators.style.cssText = `
@@ -125,7 +125,7 @@ function slider({container, slide, nextArrow, prewArrow, totalCounter, currentCo
         }
 
         dots.forEach(dot => dot.style.opacity = ".5");
-        dots[ slideIndex-1].style.opacity = 1;
+        dots[slideIndex-1].style.opacity = 1;
     });
 
     dots.forEach(dot => {
