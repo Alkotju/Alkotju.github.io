@@ -1,5 +1,5 @@
 function calc(){
-    const result = document.querySelector('.calculating__result.span');
+    const result = document.querySelector('.calculating__result span');
 
     let sex, height, weight, age, ratio;
 
@@ -76,7 +76,7 @@ function calc(){
     getStaticInformation('#gender div', 'calculating__choose-item_active');
     getStaticInformation('.calculating__choose_big div', 'calculating__choose-item_active');
 
-    function getDynamicInfirmation(selector){
+    function getDynamicInformation(selector){
         const input = document.querySelector(selector);
 
         input.addEventListener('input', () => {
@@ -102,9 +102,9 @@ function calc(){
             calcTotal();
         });
     }
-    getDynamicInfirmation('#height');
-    getDynamicInfirmation('#weight');
-    getDynamicInfirmation('#age');
+    getDynamicInformation('#height');
+    getDynamicInformation('#weight');
+    getDynamicInformation('#age');
 }
 
 export default calc;
