@@ -24,7 +24,7 @@ function forms(formsSelector, modalTimerId){
             `;
             form.insertAdjacentElement('afterend', statusMessage);
 
-            const formData = new formData(form);
+            const formData = new FormData(form);
 
             const json = JSON.stringify(Object.fromEntries(formData.entries()));
 
@@ -60,7 +60,7 @@ function forms(formsSelector, modalTimerId){
             thanksModal.remove();
             prevModalDialog.classList.add('show');
             prevModalDialog.classList.remove('hide');
-            closeModal();
+            closeModal('.modal');
         }, 4000);
     }
 } export default forms;
