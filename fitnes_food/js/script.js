@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', function(){// когда загру�
         nextArrow: '.offer__slider-next',
         prewArrow: '.offer__slider-prev',
         totalCounter: '#total',
-        currentCounter: '#curent',
+        currentCounter: '#current',
         wrapper: '.offer__slider-wrapper',
         field: '.offer__slider-inner'
     });
