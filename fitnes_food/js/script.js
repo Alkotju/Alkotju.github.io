@@ -17,10 +17,10 @@ window.addEventListener('DOMContentLoaded', function(){// когда загру�
     calc();
     forms('form', modalTimerId);
     slider({
-        container: '.offer_slider',
+        container: '.offer__slider',
         slide: '.offer__slide',
         nextArrow: '.offer__slider-next',
-        prewArrow: '.offer__slider-prev',
+        prevArrow: '.offer__slider-prev',
         totalCounter: '#total',
         currentCounter: '#current',
         wrapper: '.offer__slider-wrapper',
