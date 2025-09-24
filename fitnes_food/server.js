@@ -11,13 +11,12 @@ app.use(cors());
 app.use(express.json());
 
 //mongoDB connection
-const mongoURI = 'mongo+srv://alkotju:<895122>@cluster0.sp4bqqv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const mongoURI = 'mongodb+srv://alkotju:895122@cluster0.sp4bqqv.mongodb.net/db?retryWrites=true&w=majority&appName=Cluster0';
 mongoose.connect(mongoURI)
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.log(err));
 
 //mongoose schema and model
-
 const menuSchema = new mongoose.Schema({
     img: String,
     altimg: String,
@@ -54,7 +53,7 @@ const seedDatabase = async () => {
 const Request = mongoose.model('Request', requestSchema);
 
 //API Routes
-app.post('/request', async (req, res) => {
+app.post('/requests', async (req, res) => {
     try {
         const newRequest = new Request(req.body);
         await newRequest.save();
@@ -74,7 +73,7 @@ app.get('/menu', async (req, res) =>{
 });
 
 
-// stsrt the server and seed database
+// start the server and seed database
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
     seedDatabase();
