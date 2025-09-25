@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="menu__item-actions">
                 <button class="btn btn-primary btn-sm edit-btn" data-id="${item._id}">Редактировать</button>
-                <buttun class="btn btn-danger btn-sm delete-btn" data-id="${item._id}">Удалить</buttun>
+                <button class="btn btn-danger btn-sm delete-btn" data-id="${item._id}">Удалить</button>
             </div>
             `;
             menuItemsContainer.appendChild(menuItemElement);
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch('/menu', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'applicantion/json'
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(data)
             });
@@ -59,13 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 addMenuItemForm.reset();
                 fetchMenuItems();
             } else {
-                alert('filed to add menu item. Please try again.');
+                alert('Failed to add menu item. Please try again.');
             }
         } catch (error){
             console.error('Error:', error);
             alert('An error occurred. Please try again.');
         }
     });
+
     updateBtn.addEventListener('click', async () => {
         const itemId = editItemIdInput.value;
         const formData = new FormData(addMenuItemForm);
@@ -80,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: JSON.stringify(data)
             });
 
-            if (responce.ok){
+            if (response.ok){
                 alert('Menu item updated successfully!');
                 addMenuItemForm.reset();
                 fetchMenuItems();
@@ -101,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 method: 'POST'
             });
 
-            if (responce.ok){
+            if (response.ok){
                 window.location.href = '/';
             } else {
                 alert('Failed to logout. Please try again.');
@@ -125,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         alert('Menu item deleted successfully!');
                         fetchMenuItems();
                     } else {
-                        alert('filed to delete menu item. Please try again.');
+                        alert('Failed to delete menu item. Please try again.');
                     }
                 } catch (error){
                     console.error('Error:', error);
