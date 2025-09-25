@@ -17,10 +17,10 @@ app.use(session({
     secret: 'secret-key',
     resave: false,
     saveUninitialized: true,
-    cookie: {secure: false} // v razrabotke mozno ispolzovat http
+    cookie: {secure: false} // в разработке можно использовать http
 }));
 
-//testovij administrator
+//тестовый администратор
 const adminUser = {
     username: 'admin',
     password: 'password'
@@ -68,7 +68,7 @@ const seedDatabase = async () => {
 
 const Request = mongoose.model('Request', requestSchema);
 
-//Middleware dlja proverki auth 
+//Middleware для проверки аутентификации
 const isAuthenticated = (req, res, next) => {
     if (req.session.user) {
         next();
@@ -158,7 +158,6 @@ app.put('/menu/:id', isAuthenticated, async (req, res) =>{
         res.status(400).json({ message: error.message});
     }
 });
-
 
 // start the server and seed database
 app.listen(port, () => {
