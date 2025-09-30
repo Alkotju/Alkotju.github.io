@@ -26,14 +26,14 @@ const adminUser = {
     password: 'password'
 };
 
-//MongoDB connection
-const mongoURI = 'mongodb+srv://alkotju:895122@cluster0.sp4bqqv.mongodb.net/db?retryWrites=true&w=majority&appName=Cluster0';
+//MongoDB connection mongodb+srv://alkotju:<db_password>@cluster0.sp4bqqv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+const mongoURI = 'mongodb+srv://alkotju:895122@cluster0.sp4bqqv.mongodb.net/dbWeb?retryWrites=true&w=majority&appName=Cluster0';
 mongoose.connect(mongoURI)
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.log(err));
 
 //Mongoose schema and model
-const menuSchema = new mongoose.Schema({
+const courseSchema = new mongoose.Schema({
     img: String,
     altimg: String,
     title: String,
@@ -41,7 +41,7 @@ const menuSchema = new mongoose.Schema({
     price: Number
 });
 
-const MenuItem = mongoose.model('MenuItem', menuSchema, 'menu');
+const courseItem = mongoose.model('courseItem', courseSchema, 'course');
 
 const requestSchema = new mongoose.Schema({
     name: String,
@@ -51,15 +51,15 @@ const requestSchema = new mongoose.Schema({
 // function to seed the database
 const seedDatabase = async () => {
     try {
-        const count = await MenuItem.countDocuments();
+        const count = await courseItem.countDocuments();
         if (count === 0){
-            console.log('No data found in menu collection. Seeding database...');
+            console.log('No data found in courses collection. Seeding database...');
             const data = fs.readFileSync('db.json', 'utf-8');
             const json = JSON.parse(data);
-            await MenuItem.insertMany(json.menu);
+            await courseItem.insertMany(json.courses);
             console.log('Database seeded successfully.');
         } else {
-            console.log('Menu collection already contains data. Skipping seed.');
+            console.log('Courses collection already contains data. Skipping seed.');
         }
     } catch (error) {
         console.error('Error seeding database:', error);
@@ -120,18 +120,18 @@ app.post('/requests', async (req, res) => {
     }
 });
 
-app.get('/menu', async (req, res) =>{
+app.get('/courses', async (req, res) =>{
     try{
-        const menuItems = await MenuItem.find();
-        res.json(menuItems);
+        const coursesItems = await courseItem.find();
+        res.json(coursesItems);
     } catch (error) {
         res.status(500).json({ message: error.message});
     }
 });
 
-app.post('/menu', isAuthenticated, async(req, res) =>{
+app.post('/courses', isAuthenticated, async(req, res) =>{
     try {
-        const newItem= new MenuItem(req.body);
+        const newItem= new courseItem(req.body);
         await newItem.save();
         res.status(201).json(newItem);
     } catch (error){
@@ -139,20 +139,20 @@ app.post('/menu', isAuthenticated, async(req, res) =>{
     }
 });
 
-app.delete('/menu/:id', isAuthenticated, async (req, res) =>{
+app.delete('/courses/:id', isAuthenticated, async (req, res) =>{
     try{
         const { id } = req.params;
-        await MenuItem.findByIdAndDelete(id);
-        res.status(200).send('Menu item deleted');
+        await courseItem.findByIdAndDelete(id);
+        res.status(200).send('Course item deleted');
     } catch (error) {
         res.status(400).json({ message: error.message});
     }
 });
 
-app.put('/menu/:id', isAuthenticated, async (req, res) =>{
+app.put('/courses/:id', isAuthenticated, async (req, res) =>{
     try{
         const { id } = req.params;
-        const updatedItem = await MenuItem.findByIdAndUpdate(id, req.body, {new: true});
+        const updatedItem = await courseItem.findByIdAndUpdate(id, req.body, {new: true});
         res.status(200).json(updatedItem);
     } catch (error) {
         res.status(400).json({ message: error.message});

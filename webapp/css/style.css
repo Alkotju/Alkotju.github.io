@@ -13,7 +13,7 @@ a {
 
 /* Buttons */
 .btn {
-  width: 220px;
+  width: 175px;
   height: 65px;
   display: flex;
   justify-content: center;
@@ -21,19 +21,23 @@ a {
   background-color: #fff;
   font-size: 18px;
   font-weight: 700;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 2px solid rgb(0, 0, 0);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: 0.3s all;
   outline: 0;
+  border-radius: 25px;
 }
 
 .btn_white {
   background-color: #fff;
+  color: #033470;
+  width: 220px;
+  height: 65px;
 }
 
 .btn_dark {
-  background-color: #303030;
+  background-color: #033470;
   color: #fff;
   border: none;
 }
@@ -43,7 +47,7 @@ a {
 }
 
 .btn:hover {
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 30px #075fcc;
 }
 
 /* Container */
@@ -108,10 +112,10 @@ a {
   display: block;
   width: 110%;
   left: -5%;
-  bottom: -1px;
+  bottom: -8px;
   z-index: -1;
   height: 8px;
-  background: #b83416;
+  background: #033470;
 }
 
 .header__link:last-child {
@@ -121,7 +125,7 @@ a {
 /* Sidepanel */
 .sidepanel {
   position: fixed;
-  left: 60px;
+  left: 15px;
   top: 240px;
   height: 400px;
   width: 25px;
@@ -145,7 +149,7 @@ a {
 .sidepanel__divider {
   width: 1px;
   height: 165px;
-  background-color: #000;
+  background-color: #060606;
 }
 
 .sidepanel__icon {
@@ -176,7 +180,7 @@ a {
   top: -155px;
   width: 50vw;
   height: 900px;
-  background: rgba(146, 242, 255, 0.15);
+  background: rgba(81, 201, 252, 0.273);
   z-index: -1;
 }
 
@@ -205,7 +209,7 @@ a {
   right: -177px;
   width: 550px;
   height: 359px;
-  background: rgba(251, 254, 93, 0.8);
+  background: rgba(93, 208, 254, 0.8);
   padding: 50px;
   font-size: 24px;
   font-weight: 300;
@@ -260,13 +264,14 @@ a {
   position: absolute;
   width: 1109px;
   height: 780px;
-  background: rgba(243, 255, 222, 0.45);
+  background: rgba(9, 71, 229, 0.765);
   z-index: -1;
   top: 50px;
 }
 
 .offer__text {
   width: 580px;
+  color: rgb(247, 250, 254);
 }
 
 .offer__descr {
@@ -285,6 +290,7 @@ a {
 .offer__advantages {
   width: 330px;
   margin-top: 50px;
+  color: rgba(0, 0, 0, 0.969)  
 }
 
 .offer__advantages h2 {
@@ -349,7 +355,7 @@ a {
 
 .offer__slide img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -365,7 +371,7 @@ a {
 .calculating__field {
   width: 100%;
   margin-top: 50px;
-  background: rgba(146, 242, 255, 0.15);
+  background: rgba(62, 111, 216, 0.15);
   padding: 30px 0 40px 0;
 }
 
@@ -417,7 +423,7 @@ a {
 
 .calculating__choose-item_active {
   color: #fff;
-  background-color: #b83416;
+  background-color: #1624b8;
 }
 
 .calculating__choose_medium {
@@ -479,7 +485,7 @@ a {
   margin-top: 50px;
   padding: 50px 0;
   width: 100%;
-  background: rgba(249, 254, 126, 0.25);
+  background: rgba(126, 179, 254, 0.25);
 }
 
 .menu__item {
@@ -575,7 +581,7 @@ a {
   position: absolute;
   width: 50%;
   height: 499px;
-  background: rgba(243, 255, 222, 0.35);
+  background: rgba(222, 237, 255, 0.35);
   z-index: -1;
   top: -50px;
   left: 0;
@@ -616,11 +622,12 @@ a {
 .promotion__timer .timer__block {
   width: 102px;
   height: 120px;
-  background: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  background: #97cffe;
+  box-shadow: 0 4px 20px rgba(0, 23, 59, 0.996);
   font-size: 16px;
   font-weight: 300;
   text-align: center;
+  border-radius: 10px;
 }
 
 .promotion__timer .timer__block span {
@@ -634,7 +641,7 @@ a {
 /* Footer */
 .footer {
   min-height: 180px;
-  background-color: #303030;
+  background-color: #030530;
   padding: 45px 0 50px 0;
   color: #fff;
 }
