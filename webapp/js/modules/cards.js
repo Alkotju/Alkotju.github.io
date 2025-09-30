@@ -11,9 +11,9 @@ function cards(){
             this.classes = classes;
             this.parent = document.querySelector(parentSelector);
             this.transfer = 1;
-            this.changeToUSD();
+            this.changeToEUR();
         }
-        changeToUSD(){
+        changeToEUR(){
             this.price = this.price * this.transfer
         }
 
