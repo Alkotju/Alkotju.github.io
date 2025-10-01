@@ -1,52 +1,52 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const addMenuItemForm = document.getElementById('add-menu-item-form');
+    const addCourseItemForm = document.getElementById('add-course-item-form');
     const logoutBtn = document.getElementById('logout-btn');
-    const menuItemsContainer = document.querySelector('#menu-items-container');
-    const editItemIdInput= document.getElementById('edit-item-id');
+    const coursesItemsContainer = document.querySelector('#courses-items-container');
+    const editItemIdInput = document.getElementById('edit-item-id');
     const addBtn = document.getElementById('add-btn');
     const updateBtn = document.getElementById('update-btn');
 
-    const fetchMenuItems = async () => {
+    const fetchCoursesItems = async () => {
         try {
-            const response = await fetch('/menu');
-            const menuItems = await response.json();
-            renderMenuItems(menuItems);
+            const response = await fetch('/courses');
+            const coursesItems = await response.json();
+            renderCoursesItems(coursesItems);
         } catch (error) {
-            console.error('Error fetching menu items:', error);
+            console.error('Error fetching courses items:', error);
         }
     };
 
-    const renderMenuItems = (menuItems) => {
-        menuItemsContainer.innerHTML = '';
-        menuItems.forEach(item => {
-            const menuItemElement = document.createElement('div');
-            menuItemElement.classList.add('menu__item');
-            menuItemElement.innerHTML = `
+    const renderCoursesItems = (coursesItems) => {
+        coursesItemsContainer.innerHTML = '';
+        coursesItems.forEach(item => {
+            const courseItemElement = document.createElement('div');
+            courseItemElement.classList.add('course__item');
+            courseItemElement.innerHTML = `
             <img src="../${item.img}" alt="${item.altimg}">
-            <div class="menu__item-content">
-                <h3 class="menu__item-subtitle">${item.title}</h3>
-                <div class="menu__item-descr">${item.descr}</div>
-                <div class="menu__item-price">
-                    <div class="menu__item-cost">Цена:</div>
-                    <div class="menu__item-total"><span>${item.price}</span> евро/день</div>
+            <div class="course__item-content">
+                <h3 class="course__item-subtitle">${item.title}</h3>
+                <div class="course__item-descr">${item.descr}</div>
+                <div class="course__item-price">
+                    <div class="course__item-cost">Цена:</div>
+                    <div class="course__item-total"><span>${item.price}</span> евро/день</div>
                 </div>
             </div>
-            <div class="menu__item-actions">
+            <div class="course__item-actions">
                 <button class="btn btn-primary btn-sm edit-btn" data-id="${item._id}">Редактировать</button>
                 <button class="btn btn-danger btn-sm delete-btn" data-id="${item._id}">Удалить</button>
             </div>
             `;
-            menuItemsContainer.appendChild(menuItemElement);
+            coursesItemsContainer.appendChild(courseItemElement);
         });
     };
 
-    addMenuItemForm.addEventListener('submit', async (e) => {
+    addCourseItemForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const formData = new FormData(addMenuItemForm);
+        const formData = new FormData(addCourseItemForm);
         const data = Object.fromEntries(formData.entries());
 
         try {
-            const response = await fetch('/menu', {
+            const response = await fetch('/courses', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -55,25 +55,25 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok) {
-                alert('Menu item added successfully!');
-                addMenuItemForm.reset();
-                fetchMenuItems();
+                alert('Курс добавлен успешно!');
+                addCourseItemForm.reset();
+                fetchCoursesItems();
             } else {
-                alert('Failed to add menu item. Please try again.');
+                alert('Не удалось добавить курс. Попробуйте снова.');
             }
-        } catch (error){
+        } catch (error) {
             console.error('Error:', error);
-            alert('An error occurred. Please try again.');
+            alert('Произошла ошибка. Пожалуйста, попробуйте снова.');
         }
     });
 
     updateBtn.addEventListener('click', async () => {
         const itemId = editItemIdInput.value;
-        const formData = new FormData(addMenuItemForm);
+        const formData = new FormData(addCourseItemForm);
         const data = Object.fromEntries(formData.entries());
 
         try {
-            const response = await fetch(`/menu/${itemId}`, {
+            const response = await fetch(`/courses/${itemId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -81,18 +81,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: JSON.stringify(data)
             });
 
-            if (response.ok){
-                alert('Menu item updated successfully!');
-                addMenuItemForm.reset();
-                fetchMenuItems();
+            if (response.ok) {
+                alert('Курс обновлен успешно!');
+                addCourseItemForm.reset();
+                fetchCoursesItems();
                 addBtn.style.display = 'block';
                 updateBtn.style.display = 'none';
             } else {
-                alert('Failed to update menu item. Please try again.');
+                alert('Не удалось обновить курс. Попробуйте снова.');
             }
-        } catch (error){
+        } catch (error) {
             console.error('Error:', error);
-            alert('An error occured. Please try again.');
+            alert('Произошла ошибка. Пожалуйста, попробуйте снова.');
         }
     });
 
@@ -102,47 +102,46 @@ document.addEventListener('DOMContentLoaded', () => {
                 method: 'POST'
             });
 
-            if (response.ok){
+            if (response.ok) {
                 window.location.href = '/';
             } else {
-                alert('Failed to logout. Please try again.');
+                alert('Не удалось выйти. Попробуйте снова.');
             }
-        } catch (error){
+        } catch (error) {
             console.error('Error:', error);
-            alert('An error occured. Please try again.');
+            alert('Произошла ошибка. Пожалуйста, попробуйте снова.');
         }
     });
 
-    menuItemsContainer.addEventListener('click', async (e) => {
-        if (e.target.classList.contains('delete-btn')){
+    coursesItemsContainer.addEventListener('click', async (e) => {
+        if (e.target.classList.contains('delete-btn')) {
             const itemId = e.target.dataset.id;
-            if(confirm('Are you sure you want to delete this item?')){
+            if (confirm('Вы уверены, что хотите удалить этот курс?')) {
                 try {
-                    const response = await fetch(`/menu/${itemId}`, {
+                    const response = await fetch(`/courses/${itemId}`, {
                         method: 'DELETE'
                     });
 
                     if (response.ok) {
-                        alert('Menu item deleted successfully!');
-                        fetchMenuItems();
+                        alert('Курс удален успешно!');
+                        fetchCoursesItems();
                     } else {
-                        alert('Failed to delete menu item. Please try again.');
+                        alert('Не удалось удалить курс. Попробуйте снова.');
                     }
-                } catch (error){
+                } catch (error) {
                     console.error('Error:', error);
-                    alert('An error occurred. Please try again.');
+                    alert('Произошла ошибка. Пожалуйста, попробуйте снова.');
                 }
-
             }
         }
-        
-        if (e.target.classList.contains('edit-btn')){
-            const itemId = e.target.dataset.id;
-            const response = await fetch('/menu');
-            const menuItems = await response.json();
-            const selectedItem = menuItems.find(item => item._id === itemId);
 
-            if (selectedItem){
+        if (e.target.classList.contains('edit-btn')) {
+            const itemId = e.target.dataset.id;
+            const response = await fetch('/courses');
+            const coursesItems = await response.json();
+            const selectedItem = coursesItems.find(item => item._id === itemId);
+
+            if (selectedItem) {
                 document.getElementById('img').value = selectedItem.img;
                 document.getElementById('altimg').value = selectedItem.altimg;
                 document.getElementById('title').value = selectedItem.title;
@@ -154,8 +153,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateBtn.style.display = 'block';
             }
         }
-        
+
     });
 
-    fetchMenuItems();
+    fetchCoursesItems();
 });

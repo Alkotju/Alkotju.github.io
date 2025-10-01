@@ -20,14 +20,15 @@ app.use(session({
     cookie: {secure: false} // в разработке можно использовать http
 }));
 
+
+const config = require('./config.json');
+const adminUser = config.adminUser;
+const mongoURI = config.mongoURI;
 //тестовый администратор
-const adminUser = {
-    username: 'admin',
-    password: 'password'
-};
+
 
 //MongoDB connection mongodb+srv://alkotju:<db_password>@cluster0.sp4bqqv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-const mongoURI = 'mongodb+srv://alkotju:895122@cluster0.sp4bqqv.mongodb.net/dbWeb?retryWrites=true&w=majority&appName=Cluster0';
+
 mongoose.connect(mongoURI)
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.log(err));

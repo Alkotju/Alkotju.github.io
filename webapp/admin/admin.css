@@ -1,6 +1,5 @@
 body {
     background-color: #f4f4f4;
-
 }
 
 .admin-container {
@@ -22,23 +21,23 @@ body {
     flex: 2;
 }
 
-#add-menu-item-form .form-group{
+#add-course-item-form .form-group {
     margin-bottom: 15px;
 }
 
-#add-menu-item-form label{
+#add-course-item-form label {
     display: block;
     margin-bottom: 5px;
 }
 
-#add-menu-item-form .form-control{
+#add-course-item-form .form-control {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
-   border-radius: 4px;
+    border-radius: 4px;
 }
 
-.menu__item{
+.course__item {
     display: flex;
     gap: 15px;
     background: #fff;
@@ -49,18 +48,18 @@ body {
     align-items: center;
 }
 
-.menu__item img {
+.course__item img {
     width: 150px;
     height: 100px;
     object-fit: cover;
     border-radius: 4px;
 }
 
-.menu__item-content {
+.course__item-content {
     flex: 1;
 }
 
-.menu__item-actions {
+.course__item-actions {
     display: flex;
     flex-direction: column;
     gap: 10px;
