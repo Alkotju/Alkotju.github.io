@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figure Store</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>"World of Figures" Store</h1>
+  </header>
+
+  <main>
+    <!-- Section for adding a new figure -->
+    <section class="add-figure-section">
+      <h2>Add a New Figure</h2>
+      <form id="add-figure-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="material">Material:</label>
+          <textarea id="material" rows="2" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="size">Size:</label>
+          <textarea id="size" rows="1" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea id="description" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="price">Price:</label>
+          <input type="number" id="price" step="0.01" required>
+        </div>
+        <div class="form-group">
+          <label for="image">Price:</label>
+          <input type="text" id="image" placeholder="/img/pic.jpg" required>
+        </div>
+        
+        <button type="submit">Add Figure</button>
+      </form>
+    </section>
+
+    <!-- Section for displaying the figure list -->
+    <section class="figure-list-section">
+      <h2>Figure Catalog</h2>
+      <div id="figure-list" class="figure-grid">
+        <!-- Figure cards will be inserted here by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 World of Figures</p>
+  </footer>
+
+  <!-- Edit Figure Modal -->
+  <div id="edit-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Edit Figure</h2>
+      <form id="edit-figure-form">
+        <input type="hidden" id="edit-figure-id">
+        <div class="form-group">
+          <label for="edit-name">Name:</label>
+          <input type="text" id="edit-name" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-material">Material:</label>
+          <textarea id="edit-material" rows="2" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="edit-size">Size:</label>
+          <textarea id="edit-size" rows="1" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="edit-description">Description:</label>
+          <textarea id="edit-description" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="edit-price">Price:</label>
+          <input type="number" id="edit-price" step="0.01" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-image">Price:</label>
+          <input type="text" id="edit-image" placeholder="/img/pic.jpg" required>
+        </div>
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Connect our JavaScript file -->
+  <script src="/app.js"></script>
+</body>
+</html>
