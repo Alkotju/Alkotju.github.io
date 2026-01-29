@@ -4,3 +4,4 @@ webapp/node_modules/
 webapp/config.json
 graphqlMVCfig/node_modules/
 news/node_modules
+chatTS/node_modules
